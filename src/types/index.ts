@@ -1,6 +1,7 @@
 export * from './ErrorCodesEnum';
 export * from './ErrorResult';
 export * from './GooglePaymentMethodTypesEnum';
+export * from './SavePaymentMethodEnum';
 export * from './PaymentMethodTypesEnum';
 export * from './TokenizationParams';
 export * from './TokenizationResult';

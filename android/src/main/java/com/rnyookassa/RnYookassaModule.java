@@ -112,9 +112,12 @@ public class RnYookassaModule extends ReactContextBaseJavaModule {
 
     String confirmationUrl = obj.getString("confirmationUrl");
     String _paymentMethodType = String.valueOf(obj.getString("paymentMethodType"));
+    String clientApplicationKey = obj.getString("clientApplicationKey");
+    String shopId = obj.getString("shopId");
+
     PaymentMethodType paymentMethodType = PaymentMethodType.valueOf(_paymentMethodType);
 
-    Intent intent = Checkout.createConfirmationIntent(this.reactContext, confirmationUrl, paymentMethodType);
+    Intent intent = Checkout.createConfirmationIntent(this.reactContext, confirmationUrl, paymentMethodType, clientApplicationKey, shopId);
     Activity activity = getCurrentActivity();
 
     if (activity == null) {
