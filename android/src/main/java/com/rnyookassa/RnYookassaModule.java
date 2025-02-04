@@ -71,7 +71,9 @@ public class RnYookassaModule extends ReactContextBaseJavaModule {
     String userPhoneNumber = obj.hasKey("userPhoneNumber") ? obj.getString("userPhoneNumber") : null;
     String gatewayId = obj.hasKey("gatewayId") ? obj.getString("gatewayId") : null;
     String returnUrl = obj.hasKey("returnUrl") ? obj.getString("returnUrl") : null;
-    String savePaymentMethod = obj.hasKey("savePaymentMethod") ? obj.getString("savePaymentMethod") : SavePaymentMethod.ON;
+    String savePaymentMethodStr = obj.hasKey("savePaymentMethod") ? obj.getString("savePaymentMethod") : "ON";
+    SavePaymentMethod savePaymentMethod = SavePaymentMethod.valueOf(savePaymentMethodStr);
+
     ReadableArray googlePaymentTypes = obj.hasKey("googlePaymentMethodTypes") ? obj.getArray("googlePaymentMethodTypes") : null;
 
     Boolean isDebug = obj.hasKey("isDebug") ? Boolean.valueOf(obj.getBoolean("isDebug")) : false;
