@@ -34,7 +34,7 @@ import ru.yoomoney.sdk.kassa.payments.checkoutParameters.PaymentParameters;
 import ru.yoomoney.sdk.kassa.payments.TokenizationResult;
 import ru.yoomoney.sdk.kassa.payments.checkoutParameters.PaymentMethodType;
 import ru.yoomoney.sdk.kassa.payments.checkoutParameters.TestParameters;
-
+import ru.yoomoney.sdk.kassa.payments.checkoutParameters.SavePaymentMethod;
 public class RnYookassaModule extends ReactContextBaseJavaModule {
 
   private final ReactApplicationContext reactContext;
@@ -71,6 +71,7 @@ public class RnYookassaModule extends ReactContextBaseJavaModule {
     String userPhoneNumber = obj.hasKey("userPhoneNumber") ? obj.getString("userPhoneNumber") : null;
     String gatewayId = obj.hasKey("gatewayId") ? obj.getString("gatewayId") : null;
     String returnUrl = obj.hasKey("returnUrl") ? obj.getString("returnUrl") : null;
+    String savePaymentMethod = obj.hasKey("savePaymentMethod") ? obj.getString("savePaymentMethod") : SavePaymentMethod.ON;
     ReadableArray googlePaymentTypes = obj.hasKey("googlePaymentMethodTypes") ? obj.getArray("googlePaymentMethodTypes") : null;
 
     Boolean isDebug = obj.hasKey("isDebug") ? Boolean.valueOf(obj.getBoolean("isDebug")) : false;
@@ -84,7 +85,7 @@ public class RnYookassaModule extends ReactContextBaseJavaModule {
       subtitle,
       clientApplicationKey,
       shopId,
-      settings.getSavePaymentMethod(),
+      savePaymentMethod,
       // optional:
       paymentMethodTypes,
       gatewayId,
