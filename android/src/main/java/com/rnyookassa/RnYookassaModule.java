@@ -144,6 +144,7 @@ public class RnYookassaModule extends ReactContextBaseJavaModule {
       paymentMethodTypes.add(PaymentMethodType.BANK_CARD);
       paymentMethodTypes.add(PaymentMethodType.SBERBANK);
       paymentMethodTypes.add(PaymentMethodType.GOOGLE_PAY);
+      paymentMethodTypes.add(PaymentMethodType.SBP);
 
       if (authCenterClientIdProvided) {
         paymentMethodTypes.add(PaymentMethodType.YOO_MONEY);
