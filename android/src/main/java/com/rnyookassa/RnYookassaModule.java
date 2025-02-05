@@ -153,6 +153,9 @@ public class RnYookassaModule extends ReactContextBaseJavaModule {
       for (int i = 0; i < paymentTypes.size(); i++) {
         String upperType = paymentTypes.getString(i).toUpperCase();
         switch (upperType) {
+          case "SBP":
+            paymentMethodTypes.add(PaymentMethodType.SBP);
+            break;
           case "BANK_CARD":
             paymentMethodTypes.add(PaymentMethodType.BANK_CARD);
             break;
