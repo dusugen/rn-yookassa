@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -107,6 +107,9 @@
 				ru,
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
+			packageReferences = (
+				E86B8CC72D5505B50029131F /* XCRemoteSwiftPackageReference "yookassa-payments-swift" */,
+			);
 			productRefGroup = 58B511D21A9E6C8500147676;
 			projectDirPath = "";
 			projectRoot = "";
@@ -292,6 +295,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E86B8CC72D5505B50029131F /* XCRemoteSwiftPackageReference "yookassa-payments-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://git.yoomoney.ru/scm/sdk/yookassa-payments-swift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 7.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 58B511D31A9E6C8500147676 /* Project object */;
 }

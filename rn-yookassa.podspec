@@ -19,8 +19,8 @@ Pod::Spec.new do |s|
   s.license      = package["license"]
   s.authors      = package["author"]
 
-  s.platforms    = { :ios => "10.0" }
-  s.source       = { :git => "https://github.com/kurovskyi/rn-yookassa.git", :tag => "#{s.version}" }
+  s.platforms    = { :ios => "14.0" }
+  s.source       = { :git => "https://github.com/dusugen/rn-yookassa.git#ios/update-native-lib-version", :tag => "#{s.version}" }
 
   s.source_files = "ios/**/*.{h,m,mm,swift}"
   s.requires_arc = true
