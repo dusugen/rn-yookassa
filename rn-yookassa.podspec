@@ -28,6 +28,5 @@ Pod::Spec.new do |s|
 
   s.dependency "React-Core"
   s.dependency "YooKassaPayments"
-  s.dependency "CardIO", "~> 5.4.1"
 
 end
